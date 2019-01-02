@@ -17,9 +17,6 @@ public interface UserDao {
     @Query("SELECT * FROM User WHERE id = :id")
     User getById(long id);
 
-    @Query("SELECT * FROM User WHERE `status` LIKE :status")
-    User getByStatus(boolean status);
-
     @Insert
     void insert(User user);
 
